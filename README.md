@@ -1,0 +1,1 @@
+NearBy é seu app de fácil acesso e simples interface que conecta o usuário aos seus lugares favoritos.
