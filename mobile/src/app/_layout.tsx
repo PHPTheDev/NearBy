@@ -8,6 +8,7 @@ import {
 	Rubik_700Bold,
 } from "@expo-google-fonts/rubik";
 import { Loading } from "../components/loading";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 // rotas da nossa aplicação
 export default function Layout() {
@@ -23,13 +24,15 @@ export default function Layout() {
 	}
 
 	return (
-		<Stack
-			screenOptions={{
-				headerShown: false,
-				contentStyle: { backgroundColor: colors.gray[100] },
-			}}
-		>
-			<Stack.Screen name="home_screen" options={{ title: "Home Screen" }} />
-		</Stack>
+		<GestureHandlerRootView style={{ flex: 1 }}>
+			<Stack
+				screenOptions={{
+					headerShown: false,
+					contentStyle: { backgroundColor: colors.gray[100] },
+				}}
+			>
+				<Stack.Screen name="home_screen" options={{ title: "Home Screen" }} />
+			</Stack>
+		</GestureHandlerRootView>
 	);
 }
